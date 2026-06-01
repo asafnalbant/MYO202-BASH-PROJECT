@@ -1,8 +1,8 @@
 #!/bin/bash
 # Ahmet Asaf Nalbant
 # 2420171035
-# 1. https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=/OKMhw1WX4r
-# 2. https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=/0Koh8e0Ggd
+# 1. https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=OKMhw1WX4r
+# 2. https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=0Koh8e0Ggd
 # 3. https://credsverse.com/credentials/c26b662a-3b2a-4a7e-b338-c04725e694ed
 
 REPORT="report.log"
