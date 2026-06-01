@@ -8,10 +8,10 @@
 
 REPORT="report.log"
 
-# 1. ISO formatında tarih ve saat
+
 echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" > "$REPORT"
 
-# 2. Donanım bilgileri
+
 echo "--- Donanim Bilgileri ---" >> "$REPORT"
 if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
     wmic cpu get name >> "$REPORT"
@@ -24,12 +24,12 @@ else
     ifconfig >> "$REPORT"
 fi
 
-# 3. Parola alma (Burada sabit tanım yapmıyoruz, kullanıcıdan geleni alıyoruz)
+
 echo -n "Lutfen parolayi girin: "
 read -s PAROLA
 
-# 4. GPG ile şifreleme (Kullanıcıdan alınan PAROLA değişkeni ile)
+
 echo "$PAROLA" | gpg --batch --yes --passphrase-fd 0 -c "$REPORT"
 
-# 5. Orijinal dosyayı sil (Güvenlik gereği)
+
 rm "$REPORT"
